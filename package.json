@@ -10,7 +10,17 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxtjs/i18n": "^8.3.1",
     "nuxt": "^3.12.4",
-    "vue": "latest"
+    "reset-css": "^5.0.2",
+    "vue": "latest",
+    "vue-screen": "^2.4.0",
+    "vue-writer": "^2.0.2"
+  },
+  "devDependencies": {
+    "sass": "^1.77.8"
+  },
+  "resolutions": {
+    "string-width": "4.2.3"
   }
 }
