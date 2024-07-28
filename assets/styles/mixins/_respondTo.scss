@@ -1,3 +1,4 @@
+@use '~/assets/styles/variables/breakpoints' as *;
 @mixin respondTo($name) {
     @if(map-has-key($breakpoints, $name)) {
         @media (min-width: #{inspect(map-get($breakpoints, $name))}) {

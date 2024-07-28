@@ -46,6 +46,7 @@ const word = ['creative', 'innovative', 'efficient', 'flexible', 'bold', 'collab
 </template>
 
 <style lang="scss" scoped>
+@use '~/assets/styles/mixins/respondTo' as *;
 .TheHero {
     display: flex;
     align-items: center;
