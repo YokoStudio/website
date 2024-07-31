@@ -13,6 +13,7 @@
   "dependencies": {
     "@nuxtjs/i18n": "^8.3.1",
     "nuxt": "^3.12.4",
+    "nuxt-gtag": "^2.1.0",
     "reset-css": "^5.0.2",
     "vue": "latest",
     "vue-screen": "^2.4.0",

@@ -1,24 +1,33 @@
 <script setup lang="ts">
 interface Props {
-    variant?: 'primary' | 'secondary'
-    icon?: 'download'
+    variant?: 'primary' | 'secondary';
+    icon?: 'figma' | 'heart';
+    href?: string;
 }
 
-withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<Props>(), {
     variant: 'primary'
 })
 
+const tag = props.href ? 'a': 'button'
+const hrefObj = { href: props.href }
 const capitalize = (str?: string) => str && str[0].toUpperCase().concat(str.slice(1))
 </script>
 
 <template>
-    <button class="BaseButton" :class="[
-        `BaseButton--${capitalize($props.variant)}`,
-        $props.icon && 'BaseButton--HasIcon'
-    ]">
-        <IconDownload v-if="$props.icon === 'download'" />
+    <component 
+        :is="tag"
+        class="BaseButton" 
+        :class="[
+            `BaseButton--${capitalize($props.variant)}`,
+            $props.icon && 'BaseButton--HasIcon'
+        ]"
+        v-bind="hrefObj"
+    >
+        <IconFigma v-if="$props.icon === 'figma'" />
+        <IconHeart v-else-if="$props.icon === 'heart'" />
         <slot />
-    </button>
+    </component>
 </template>
 
 <style lang="scss" scoped>
@@ -40,6 +49,7 @@ const capitalize = (str?: string) => str && str[0].toUpperCase().concat(str.slic
     border: 2px currentColor;
     border-radius: 4px;
     cursor: pointer;
+    text-decoration: none;
 
     &:focus-visible {
         outline: 2px solid #000000;

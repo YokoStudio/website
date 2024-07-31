@@ -1,6 +1,7 @@
 <script setup>
 import Image from 'assets/images/hero.png';
 import { VueWriter } from 'vue-writer'
+import externalLinks from '~/constants/externalLinks'
 
 const word = ['creative', 'innovative', 'efficient', 'flexible', 'bold', 'collaborative', 'committed'];
 </script>
@@ -31,10 +32,10 @@ const word = ['creative', 'innovative', 'efficient', 'flexible', 'bold', 'collab
                 </h2>
             </div>
             <div class="TheHero__cta">
-                <BaseButton icon="download">
-                    {{ $t('download') }}
+                <BaseButton :href="externalLinks.community" icon="figma">
+                    {{ $t('community') }}
                 </BaseButton>
-                <BaseButton variant="secondary">
+                <BaseButton :href="externalLinks.donate" icon="heart" variant="secondary">
                     {{ $t('donate') }}
                 </BaseButton>
             </div>

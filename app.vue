@@ -1,3 +1,26 @@
+<script setup>
+useHead({
+  meta: [
+    {
+      name: 'description',
+      content: 'we create innovative products that challenge norms, solve real-world problems, and inspire change through fresh, creative perspectives.',
+    },
+    {
+      property: 'og:title',
+      content: 'Yoko - Redefining Norms',
+    },
+    {
+      property: 'og:url',
+      content: 'https://yoko.studio',
+    },
+    {
+      property: 'og:description',
+      content: 'we create innovative products that challenge norms, solve real-world problems, and inspire change through fresh, creative perspectives.',
+    },
+  ]
+})
+</script>
+
 <template>
   <NuxtLayout>
     <Container class="App__Container">
